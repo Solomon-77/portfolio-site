@@ -3,7 +3,7 @@
 const Contact = () => {
    return (
       <div className="max-w-[600px] mx-auto space-y-9">
-         <h1 className="text-2xl font-bold text-center">My Contact</h1>
+         <h1 className="text-2xl font-bold text-center">Contact Me</h1>
          <div className="space-y-9">
             <h1 className="text-center opacity-80 font-extralight">Feel free to reach out for inquiries, collaborations, or professional opportunities.</h1>
             <form className="flex flex-col gap-4">

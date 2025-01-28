@@ -26,7 +26,7 @@ const Projects = () => {
          description: "A responsive frontend interface designed for seamless coffee ordering",
          technologies: ["React", "Typescript", "Tailwind CSS"],
          link: "https://github.com/Solomon-77/pickup-seven"
-      },
+      }
    ]
 
    return (
