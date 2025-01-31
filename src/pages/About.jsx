@@ -1,5 +1,3 @@
-
-
 const About = () => {
 
    const skills = [
@@ -30,13 +28,17 @@ const About = () => {
             <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4">
                {skills.map((skill, i) => (
                   <div key={i} className="border-[#373b45] border p-5 text-sm flex flex-col items-center rounded-md gap-3 bg-[#21252c] hover:bg-[#262a32] hover:border-[#4c515f] duration-300 ease-out">
-                     <img src={skill.src} alt={skill.alt} className="w-11 h-11 rounded-md" />
+                     <img
+                        src={skill.src}
+                        alt={skill.alt}
+                        loading="lazy"
+                        className="w-11 h-11 rounded-md"
+                     />
                      <span className="text-center">{skill.name}</span>
                   </div>
                ))}
             </div>
          </div>
-
       </div>
    )
 }
