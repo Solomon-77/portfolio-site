@@ -26,6 +26,12 @@ const Projects = () => {
          description: "A responsive frontend interface designed for seamless coffee ordering",
          technologies: ["React", "Typescript", "Tailwind CSS"],
          link: "https://github.com/Solomon-77/pickup-seven"
+      },
+      {
+         title: "AES File Encryption & Decryption Tool",
+         description: "A command-line tool for encrypting and decrypting files using AES encryption.",
+         technologies: ["Python", "PyCryptodome", "Termcolor", "OS Module"],
+         link: "https://github.com/Solomon-77/aes-file-crypto"
       }
    ]
 
