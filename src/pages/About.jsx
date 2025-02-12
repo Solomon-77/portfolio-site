@@ -23,6 +23,17 @@ const About = () => {
             <p className="font-extralight leading-relaxed">I primarily use JavaScript, with TypeScript as my secondary choice for type-safe development. My go-to framework is Vite with React.js. I'm proficient in Express.js for building APIs, and I currently use Hono for creating high-performance APIs for my personal projects.</p>
          </div>
 
+         <div className="space-y-7 flex flex-col items-center">
+            <h1 className="text-2xl font-bold text-center">My Resume</h1>
+            <a
+               href="https://cyrill-eustaquio.tiiny.site/"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="font-light bg-[#16191e] py-2 px-4 cursor-pointer rounded-md text-sm border border-cyan-50 italic">
+               Click here to view my Resume
+            </a>
+         </div>
+
          <div className="space-y-6">
             <h1 className="text-2xl font-bold text-center">What I Use</h1>
             <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4">
