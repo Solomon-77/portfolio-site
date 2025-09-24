@@ -21,7 +21,7 @@ const About = () => {
       <div className="max-w-[680px] mx-auto space-y-9">
          <div className="space-y-7 ">
             <h1 className="text-2xl font-bold text-center">About Me</h1>
-            <p className="font-extralight leading-relaxed">{"I'm a Computer Science student at the Technological Institute of the Philippines (TIP), aspiring to become a Full-Stack Developer. I've been programming for around four years, and since then, I've been obsessed with creating clean and intuitive UI designs that are simple yet visually appealing. I'm also passionate about optimizing performance and enjoy adapting to newer technologies that offer improvements in various aspects of development."}</p>
+            <p className="font-extralight leading-relaxed">{"I’m a Computer Science graduate from the Technological Institute of the Philippines (TIP), aspiring to become a Full-Stack Developer. I've been programming for around four years, and since then, I've been obsessed with creating clean and intuitive UI designs that are simple yet visually appealing. I'm also passionate about optimizing performance and enjoy adapting to newer technologies that offer improvements in various aspects of development."}</p>
             <p className="font-extralight leading-relaxed">{"I primarily use JavaScript, with TypeScript as my secondary choice for type-safe development. My go-to framework is Vite with React.js. I'm proficient in Express.js for building APIs, and I currently use Hono for creating high-performance APIs for my personal projects."}</p>
          </div>
 
