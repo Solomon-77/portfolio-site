@@ -14,7 +14,7 @@ const Home = () => {
             />
          </div>
          <div className='max-w-[700px] font-extralight leading-relaxed'>
-            I cherish simplicity in design, and I love building fast and secure applications that offer a great user experience.
+            Aw cherish simplicity in design, and I love building fast and secure applications that offer a great user experience.
          </div>
       </div>
    )
