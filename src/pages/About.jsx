@@ -1,20 +1,34 @@
-const About = () => {
+import js from '../assets/js.png';
+import ts from '../assets/ts.png';
+import vite from '../assets/vite.png';
+import react from '../assets/react.png';
+import zustand from '../assets/Zustand.svg';
+import express from '../assets/express.png';
+import node from '../assets/node.png';
+import bun from '../assets/bun.png';
+import hono from '../assets/hono.png';
+import ably from '../assets/Ably.png';
+import tailwind from '../assets/tailwind.png';
+import git from '../assets/git.png';
+import mongodb from '../assets/mongodb.png';
+import postgresql from '../assets/postgresql.png';
 
+const About = () => {
    const skills = [
-      { name: "JavaScript", src: "/js.png" },
-      { name: "TypeScript", src: "/ts.png" },
-      { name: "Vite", src: "/vite.png" },
-      { name: "React", src: "/react.png" },
-      { name: "Zustand", src: "/Zustand.svg" },
-      { name: "Express.js", src: "/express.png" },
-      { name: "Node.js", src: "/node.png" },
-      { name: "Bun", src: "/bun.png" },
-      { name: "Hono", src: "/hono.png" },
-      { name: "Ably Realtime", src: "/Ably.png" },
-      { name: "Tailwind CSS", src: "/tailwind.png" },
-      { name: "Git", src: "/git.png" },
-      { name: "MongoDB", src: "/mongodb.png" },
-      { name: "PostgreSQL", src: "/postgresql.png" },
+      { name: "JavaScript", src: js },
+      { name: "TypeScript", src: ts },
+      { name: "Vite", src: vite },
+      { name: "React", src: react },
+      { name: "Zustand", src: zustand },
+      { name: "Express.js", src: express },
+      { name: "Node.js", src: node },
+      { name: "Bun", src: bun },
+      { name: "Hono", src: hono },
+      { name: "Ably Realtime", src: ably },
+      { name: "Tailwind CSS", src: tailwind },
+      { name: "Git", src: git },
+      { name: "MongoDB", src: mongodb },
+      { name: "PostgreSQL", src: postgresql },
    ];
 
    return (
