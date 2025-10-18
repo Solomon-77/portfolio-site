@@ -42,7 +42,7 @@ const About = () => {
          <div className="space-y-7 flex flex-col items-center">
             <h1 className="text-2xl font-bold text-center">My Resume</h1>
             <a
-               href="https://cyrill-eustaquio.tiiny.site/"
+               href={`https://cyrill-eustaquio.tiiny.site/?t=${Date.now()}`}
                target="_blank"
                rel="noopener noreferrer"
                className="font-light bg-[#16191e] py-2 px-4 cursor-pointer rounded-md text-sm border border-cyan-50 italic">
