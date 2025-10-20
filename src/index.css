@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-custom: 'JetBrains Mono', serif;
+  --font-custom: 'JetBrains Mono', monospace;
 }
 
 body {
