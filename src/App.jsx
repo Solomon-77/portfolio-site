@@ -4,6 +4,7 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Layout from './components/Layout'
+import PageNotFound from './pages/PageNotFound'
 
 const App = () => {
    return (
@@ -11,6 +12,7 @@ const App = () => {
          <BrowserRouter>
             <Routes>
                <Route element={<Layout />}>
+                  <Route path='*' element={<PageNotFound />} />
                   <Route path='/' element={<Home />} />
                   <Route path='/about' element={<About />} />
                   <Route path='/projects' element={<Projects />} />
