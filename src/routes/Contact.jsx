@@ -41,8 +41,9 @@ const Contact = () => {
             <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
                <div className="flex flex-col md:flex-row gap-4">
                   <div className="w-full">
-                     <h1 className="mb-2">Name</h1>
+                     <label htmlFor="user_name" className="mb-2">Name</label>
                      <input
+                        id="user_name"
                         className="border bg-[#21252c] outline-none w-full rounded-md py-2 px-3 border-[#373b45]"
                         type="text"
                         name="user_name"
@@ -50,8 +51,9 @@ const Contact = () => {
                      />
                   </div>
                   <div className="w-full">
-                     <h1 className="mb-2">Email</h1>
+                     <label htmlFor="user_email" className="mb-2">Email</label>
                      <input
+                        id="user_email"
                         className="border bg-[#21252c] outline-none w-full rounded-md py-2 px-3 border-[#373b45]"
                         type="email"
                         name="user_email"
@@ -60,8 +62,9 @@ const Contact = () => {
                   </div>
                </div>
                <div className="w-full">
-                  <h1 className="mb-2">Message</h1>
+                  <label htmlFor="message" className="mb-2">Message</label>
                   <textarea
+                     id="message"
                      className="border-[#373b45] h-24 bg-[#21252c] w-full rounded-md border outline-none p-4"
                      name="message"
                      required
