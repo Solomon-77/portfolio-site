@@ -18,6 +18,7 @@ const Nav = () => {
                href="https://github.com/Solomon-77"
                target="_blank"
                rel="noopener noreferrer"
+               aria-label="Github Profile"
             >
                <FaGithub className="text-xl md:text-2xl cursor-pointer" />
             </a>
@@ -25,6 +26,7 @@ const Nav = () => {
                href="https://www.linkedin.com/in/cyrill-eustaquio-b37564328/"
                target="_blank"
                rel="noopener noreferrer"
+               aria-label="LinkedIn Profile"
             >
                <FaLinkedin className="text-xl md:text-2xl cursor-pointer" />
             </a>

@@ -22,15 +22,15 @@ const Layout = () => {
 
    return (
       <div className="h-screen flex flex-col text-cyan-50 overflow-auto">
-         <div className="w-full">
+         <nav className="w-full">
             <Nav />
-         </div>
-         <div className="w-full flex-1 p-4">
+         </nav>
+         <main className="w-full flex-1 p-4">
             <Outlet />
-         </div>
-         <div className="w-full">
+         </main>
+         <footer className="w-full">
             <Footer />
-         </div>
+         </footer>
       </div>
    )
 }
