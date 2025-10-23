@@ -1,20 +1,15 @@
 import { useEffect } from "react"
 import { useLocation } from "react-router-dom"
-import { getAnalyticsInstance } from "../_firebase/analytics-lazy"
+import { logEvent } from "firebase/analytics"
+import { analytics } from "../firebase"
 
 const AnalyticsTracker = () => {
     const location = useLocation()
 
     useEffect(() => {
-        async function logAnalyticsEvent() {
-            const { analytics, logEvent } = await getAnalyticsInstance()
-
-            logEvent(analytics, "screen_view", {
-                firebase_screen: location.pathname
-            })
-        }
-
-        logAnalyticsEvent()
+        logEvent(analytics, "screen_view", {
+            firebase_screen: location.pathname
+        })
     }, [location])
 
     return null
