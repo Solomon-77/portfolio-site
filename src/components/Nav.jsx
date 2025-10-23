@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Nav = () => {
    return (
-      <div className="max-w-[1000px] h-[80px] mx-auto flex justify-between items-center px-4">
+      <div className="max-w-[1000px] h-20 mx-auto flex justify-between items-center px-4">
          <div className="text-sm flex space-x-2 md:text-base md:space-x-6 items-center select-none">
             <Link to="/" className="bg-[#131519] rounded-md px-2 py-1 cursor-pointer">
                cd ..
