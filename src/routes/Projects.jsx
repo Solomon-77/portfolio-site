@@ -49,6 +49,7 @@ const Projects = () => {
                            className="absolute right-0 top-0 text-lg"
                            target="_blank"
                            rel="noopener noreferrer"
+                           aria-label="Github Project Link"
                         >
                            <FaGithub />
                         </a>
