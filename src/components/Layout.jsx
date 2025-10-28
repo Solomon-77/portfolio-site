@@ -1,7 +1,13 @@
-import { Outlet, useLocation } from "react-router-dom"
+import { useEffect } from "preact/hooks"
+import { Router, useLocation } from "preact-iso"
+
 import Nav from "./Nav"
 import Footer from "./Footer"
-import { useEffect } from "react"
+import Home from "../routes/Home"
+import About from "../routes/About"
+import Projects from "../routes/Projects"
+import Contact from "../routes/Contact"
+import PageNotFound from "../routes/PageNotFound"
 
 const Layout = () => {
    const location = useLocation()
@@ -26,7 +32,13 @@ const Layout = () => {
             <Nav />
          </nav>
          <main className="w-full flex-1 p-4">
-            <Outlet />
+            <Router>
+               <Home path='/' />
+               <About path='/about' />
+               <Projects path='/projects' />
+               <Contact path='/contact' />
+               <PageNotFound default />
+            </Router>
          </main>
          <footer className="w-full">
             <Footer />
