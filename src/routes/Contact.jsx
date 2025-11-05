@@ -1,19 +1,22 @@
-import { useRef, useState } from 'preact/hooks';
-import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
-import ClipLoader from 'react-spinners/ClipLoader';
+import { ToastContainer, toast } from 'react-toastify'
+import { useRef, useState } from 'preact/hooks'
+import { useTitle } from '../utils/useTitle'
+import emailjs from '@emailjs/browser'
+import ClipLoader from 'react-spinners/ClipLoader'
 
-const serviceID = import.meta.env.VITE_SERVICE_ID;
-const templateID = import.meta.env.VITE_TEMPLATE_ID;
-const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+const serviceID = import.meta.env.VITE_SERVICE_ID
+const templateID = import.meta.env.VITE_TEMPLATE_ID
+const publicKey = import.meta.env.VITE_PUBLIC_KEY
 
 const Contact = () => {
-   const form = useRef();
-   const [loading, setLoading] = useState(false);
+   useTitle('Cyrill: Contact')
+
+   const form = useRef()
+   const [loading, setLoading] = useState(false)
 
    const sendEmail = (e) => {
-      e.preventDefault();
-      setLoading(true);
+      e.preventDefault()
+      setLoading(true)
 
       emailjs
          .sendForm(serviceID, templateID, form.current, {
@@ -21,17 +24,17 @@ const Contact = () => {
          })
          .then(
             () => {
-               setLoading(false);
-               toast.success('Message sent successfully!');
-               form.current.reset();
+               setLoading(false)
+               toast.success('Message sent successfully!')
+               form.current.reset()
             },
             (error) => {
-               setLoading(false);
-               toast.error('Failed to send message. Please try again.');
-               console.error(error);
+               setLoading(false)
+               toast.error('Failed to send message. Please try again.')
+               console.error(error)
             },
-         );
-   };
+         )
+   }
 
    return (
       <div className="max-w-[600px] mx-auto space-y-9">
@@ -81,7 +84,7 @@ const Contact = () => {
             </form>
          </div>
       </div>
-   );
-};
+   )
+}
 
-export default Contact;
+export default Contact

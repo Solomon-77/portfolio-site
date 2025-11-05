@@ -1,6 +1,9 @@
-import Typewriter from 'typewriter-effect';
+import Typewriter from 'typewriter-effect'
+import { useTitle } from '../utils/useTitle'
 
 const Home = () => {
+   useTitle('Cyrill')
+
    return (
       <div className='h-full flex flex-col items-center justify-center text-center'>
          <div className="font-bold text-3xl mb-8">

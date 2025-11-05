@@ -1,6 +1,8 @@
 import { FaGithub } from "react-icons/fa"
+import { useTitle } from '../utils/useTitle'
 
 const Projects = () => {
+   useTitle('Cyrill: Projects')
 
    const projects = [
       {

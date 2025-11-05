@@ -8,8 +8,12 @@ if (typeof window !== 'undefined') {
 
 export async function prerender(data) {
     const { html, links } = await ssr(<App {...data} />)
+
     return {
         html: `<div id="root">${html}</div>`,
-        links
+        links,
+        head: {
+            title: globalThis.title
+        }
     }
 }

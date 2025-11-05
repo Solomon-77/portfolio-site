@@ -1,21 +1,25 @@
-import js from '../assets/js.png';
-import ts from '../assets/ts.png';
-import bun from '../assets/bun.png';
-import git from '../assets/git.png';
-import vite from '../assets/vite.png';
-import node from '../assets/node.png';
-import hono from '../assets/hono.png';
-import ably from '../assets/ably.png';
-import react from '../assets/react.png';
-import express from '../assets/express.png';
-import zustand from '../assets/zustand.svg';
-import mongodb from '../assets/mongodb.png';
-import tailwind from '../assets/tailwind.png';
-import postgresql from '../assets/postgresql.png';
+import { useTitle } from '../utils/useTitle'
 
-const resumeLink = `https://cyrill-eustaquio.tiiny.site/?t=${Date.now()}`;
+import js from '../assets/js.png'
+import ts from '../assets/ts.png'
+import bun from '../assets/bun.png'
+import git from '../assets/git.png'
+import vite from '../assets/vite.png'
+import node from '../assets/node.png'
+import hono from '../assets/hono.png'
+import ably from '../assets/ably.png'
+import react from '../assets/react.png'
+import express from '../assets/express.png'
+import zustand from '../assets/zustand.svg'
+import mongodb from '../assets/mongodb.png'
+import tailwind from '../assets/tailwind.png'
+import postgresql from '../assets/postgresql.png'
+
+const resumeLink = `https://cyrill-eustaquio.tiiny.site/?t=${Date.now()}`
 
 const About = () => {
+   useTitle('Cyrill: About Me')
+
    const skills = [
       { name: "JavaScript", src: js },
       { name: "TypeScript", src: ts },
@@ -31,7 +35,7 @@ const About = () => {
       { name: "Git", src: git },
       { name: "MongoDB", src: mongodb },
       { name: "PostgreSQL", src: postgresql },
-   ];
+   ]
 
    return (
       <div className="max-w-[680px] mx-auto space-y-9">
