@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "bun run build && aws s3 sync dist/ s3://cyrill-portfolio-site && aws cloudfront create-invalidation --distribution-id E3Q8MDE455LZKI --paths '/fonts/*' '/user.png' '/index.html' '/robots.txt' '/sitemap.xml'"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
