@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "bun run build && aws s3 sync dist/ s3://cyrill-portfolio-site && aws cloudfront create-invalidation --distribution-id E1UN54AMKIM0BE --paths '/*'"
+    "deploy": "bun run build && aws s3 sync dist/ s3://cyrill-portfolio-site && aws cloudfront create-invalidation --distribution-id E1UN54AMKIM0BE --paths '/index.html'"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
