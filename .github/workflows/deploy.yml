@@ -30,4 +30,5 @@ jobs:
       - uses: actions/upload-pages-artifact@v4 # Upload the built dist folder
         with:
           path: './dist'
-      - uses: actions/deploy-pages@v4.0.5 # Publish the uploaded artifact to GitHub Pages
+      - id: deployment
+        uses: actions/deploy-pages@v4.0.5 # Publish the uploaded artifact to GitHub Pages
