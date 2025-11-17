@@ -1,21 +1,33 @@
-name: Deploy to GitHub Pages
+name: Deploy static content to Pages
 
 on:
   push:
-    branches: [using-aws]
+    branches: ['using-aws']
+  workflow_dispatch:
 
+# Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+# Cancels any previous deployment still running if a new one starts
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5 # Pull the repository
-      - uses: oven-sh/setup-bun@v2.0.2 # Set up bun runtime
+      - uses: oven-sh/setup-bun@v2.0.2 # Set up the bun runtime
       - run: bun install && bun run build # Outputs ./dist
-
-      # Deploy to GitHub Pages
-      - uses: JamesIves/github-pages-deploy-action@v4.7.4
+      - uses: actions/configure-pages@v5 # Prepare GitHub Pages environment
+      - uses: actions/upload-pages-artifact@v4 # Upload the built dist folder
         with:
-          folder: dist
+          path: './dist'
+      - uses: actions/deploy-pages@v4.0.5 # Publish the uploaded artifact to GitHub Pages
