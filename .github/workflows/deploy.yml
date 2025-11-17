@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5 # Pull the repository
+      - uses: oven-sh/setup-bun@v2.0.2 # Set up bun runtime
       - run: bun install && bun run build # Outputs ./dist
 
       # Deploy to GitHub Pages
