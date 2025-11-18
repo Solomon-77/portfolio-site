@@ -26,6 +26,8 @@ jobs:
       - uses: actions/checkout@v5.0.1 # Pull the repository
       - uses: oven-sh/setup-bun@v2.0.2 # Set up the bun runtime
       - run: bun install && bun run build # Outputs ./dist
+        env:
+            VITE_BASE_URL: /portfolio-site/ # Set env base path
       - uses: actions/configure-pages@v5 # Prepare GitHub Pages environment
       - uses: actions/upload-pages-artifact@v4 # Upload the built dist folder
         with:
