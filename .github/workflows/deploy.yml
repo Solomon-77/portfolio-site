@@ -23,7 +23,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5 # Pull the repository
+      - uses: actions/checkout@v5.0.1 # Pull the repository
       - uses: oven-sh/setup-bun@v2.0.2 # Set up the bun runtime
       - run: bun install && bun run build # Outputs ./dist
       - uses: actions/configure-pages@v5 # Prepare GitHub Pages environment
