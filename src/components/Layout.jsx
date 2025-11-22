@@ -9,8 +9,6 @@ import Projects from "../routes/Projects"
 import PageNotFound from "../routes/PageNotFound"
 
 const Layout = () => {
-   const base = import.meta.env.BASE_URL // built-in vite variable -> relies on base in vite config
-
    return (
       <div className="h-screen flex flex-col text-cyan-50 overflow-auto">
          <nav className="w-full">
@@ -18,10 +16,10 @@ const Layout = () => {
          </nav>
          <main className="w-full flex-1 p-4">
             <Router>
-               <Home path={base} />
-               <About path={`${base}about`} />
-               <Projects path={`${base}projects`} />
-               <Contact path={`${base}contact`} />
+               <Home path='/' />
+               <About path='/about' />
+               <Projects path='/projects' />
+               <Contact path='/contact' />
                <PageNotFound default />
             </Router>
          </main>
